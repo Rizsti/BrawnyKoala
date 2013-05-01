@@ -1,0 +1,394 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Basic"
+    android:isScrollContainer="true" >
+    
+            
+     <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/charName"
+        android:inputType="text"
+        android:ellipsize="start"
+        android:textAlignment="center" />
+
+    <Spinner
+        android:id="@+id/spClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:textAlignment="center" />
+
+       <Spinner
+        android:id="@+id/spRace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/etLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="@string/charLevel"
+        android:gravity="center"
+        android:ellipsize="start"
+        android:inputType="number"/>
+
+    <Spinner
+        android:id="@+id/spAlign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:textAlignment="center" />
+
+    <Spinner
+        android:id="@+id/spDeity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:textAlignment="center" />
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#000000"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        />
+    
+    <!-- Stats -->
+    <!-- Headers -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        >
+        
+        <TextView 
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            />
+        
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/score"
+            android:gravity="bottom|center_horizontal"
+            android:layout_gravity="bottom"
+            />
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/modscore"
+            android:gravity="bottom|center_horizontal"
+            android:layout_gravity="bottom"
+            />
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tmpScore"
+            android:gravity="bottom|center_horizontal"
+            />
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tmpMod"
+            android:gravity="bottom|center_horizontal"
+            />
+        
+        
+    </LinearLayout>
+
+    
+    <!-- Strength -->
+        
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        >
+         <TextView 
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/stStr"
+            />
+         <EditText 
+             android:id="@+id/strScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/strMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/modStr"
+            />
+          <EditText 
+             android:id="@+id/strTmpScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/strTmpMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            />
+        
+     </LinearLayout>
+     
+    <!-- Dexterity -->
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        >
+         <TextView 
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/stDex"
+            />
+         <EditText 
+             android:id="@+id/dexScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/dexMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/modDex"
+            />
+          <EditText 
+             android:id="@+id/dexTmpScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/dexTmpMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            />
+        
+     </LinearLayout>
+     
+     <!-- Constitution -->
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        >
+         <TextView 
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/stCon"
+            />
+         <EditText 
+             android:id="@+id/conScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/conMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/modCon"
+            />
+          <EditText 
+             android:id="@+id/conTmpScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/conTmpMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            />
+        
+     </LinearLayout>
+     
+     <!-- Intelligence -->
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        >
+         <TextView 
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/stInt"
+            />
+         <EditText 
+             android:id="@+id/intScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/intMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/modInt"
+            />
+          <EditText 
+             android:id="@+id/intTmpScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/intTmpMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            />
+        
+     </LinearLayout>
+     
+     <!-- Wisdom -->
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        >
+         <TextView 
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/stWis"
+            />
+         <EditText 
+             android:id="@+id/wisScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/wisMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/modWis"
+            />
+          <EditText 
+             android:id="@+id/wisTmpScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/wisTmpMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            />
+        
+     </LinearLayout>
+  
+     <!-- Charisma -->
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        >
+         <TextView 
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/stCha"
+            />
+         <EditText 
+             android:id="@+id/chaScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/chaMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:text="@string/modCha"
+            />
+          <EditText 
+             android:id="@+id/chaTmpScore"
+             android:layout_height="wrap_content"
+             android:layout_width="0dip"
+             android:layout_weight="1"
+             android:inputType="number"
+            android:gravity="center_horizontal"/>
+          <TextView 
+              android:id="@+id/chaTmpMod"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            />
+        
+     </LinearLayout>
+  
+  
+</LinearLayout>

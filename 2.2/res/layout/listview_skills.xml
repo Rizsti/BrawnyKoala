@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        
+        <TextView 
+            android:id="@+id/sName"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/otherLabels"
+            android:layout_weight="4"
+            android:textColor="#000000"
+            />
+        
+        <TextView
+            android:id="@+id/sMod"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/otherLabels"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/equal" 
+            android:gravity="center_horizontal"
+            android:textColor="#000000"/>
+        
+        <TextView
+            android:id="@+id/sAMod"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/otherLabels"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/plus" 
+            android:gravity="center_horizontal"
+            android:textColor="#000000"/>
+        
+        <EditText
+            android:id="@+id/sRank"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/otherLabels"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" 
+            android:inputType="number"
+            android:textColor="#000000"/>
+        
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="@string/plus" 
+            android:gravity="center_horizontal"
+            android:textColor="#000000"/>
+        
+        <TextView
+            android:id="@+id/sMisc"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/otherLabels"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="#000000"/>
+            
+            
+        
+    </LinearLayout>
+    
+    
+
+</LinearLayout>

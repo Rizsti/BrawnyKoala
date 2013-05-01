@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+      <!-- ACTION BAR -->
+    <item
+        android:id="@+id/loadChar"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="@string/load"
+        android:icon="@drawable/load"/>
+    
+    <item 
+        android:id="@+id/saveChar"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="@string/save"
+        android:icon="@drawable/save"/>
+    
+    <item
+        android:id="@+id/newChar"
+        android:orderInCategory="3"
+        android:showAsAction="always"
+        android:title="@string/action_new"
+        android:icon="@drawable/add"/>
+    
+    
+    <!-- Menu -->
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    
+</menu>
