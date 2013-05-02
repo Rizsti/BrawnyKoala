@@ -15,7 +15,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
+/**
+ * 
+ * @author Andrea Dewey
+ *
+ *	Last Edited: March 2013
+ */
 public class DatabaseHelper extends SQLiteOpenHelper {
 		
 	//Database name and version

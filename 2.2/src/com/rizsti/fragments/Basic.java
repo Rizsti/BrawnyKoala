@@ -20,6 +20,11 @@ import com.parse.ParseQuery;
 import com.rizsti.classes.Character;
 import com.rizsti.teddy.R;
 
+/**
+ * 
+ * @author Andrea Dewey
+ *
+ */
 public class Basic extends Fragment {
 	
 	private View v;

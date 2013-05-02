@@ -17,7 +17,11 @@ import android.widget.SimpleAdapter;
 import com.rizsti.classes.Character;
 import com.rizsti.teddy.R;
 	
-
+/**
+ * 
+ * @author Andrea Dewey
+ *
+ */
 public class Skills extends ListFragment {
 	
 	//The view created

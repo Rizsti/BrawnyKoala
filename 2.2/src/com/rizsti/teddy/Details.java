@@ -19,7 +19,11 @@ import com.rizsti.dataprocessing.MySettings;
 import com.rizsti.fragments.Basic;
 import com.rizsti.fragments.Battle;
 
-
+/**
+ * The activity that holds the fragments
+ * @author Andrea Dewey
+ *
+ */
 
 public class Details extends Activity {
 	

@@ -6,7 +6,11 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.drawable.Drawable;
-
+/**
+ * 
+ * @author Andrea Dewey
+ *
+ */
 /*
  * This object uses Singletons pattern which prevents multiple instances from being created.
  * 

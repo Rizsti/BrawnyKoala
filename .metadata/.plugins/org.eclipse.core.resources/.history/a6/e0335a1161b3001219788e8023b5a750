@@ -1,0 +1,11 @@
+package com.rizsti.classes;
+
+/**
+ * A spell 
+ * @author Andrea Dewey
+ * Last Edited: May 2013
+ *
+ */
+public class Spell {
+
+}

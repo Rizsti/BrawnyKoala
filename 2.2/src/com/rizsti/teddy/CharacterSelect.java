@@ -17,7 +17,11 @@ import android.widget.SimpleAdapter;
 
 import com.rizsti.dataprocessing.DatabaseHelper;
 import com.rizsti.dataprocessing.MySettings;
-
+/**
+ * 
+ * @author Andrea Dewey
+ *
+ */
 public class CharacterSelect extends Activity {
 	
 	//Variables for element(s) in the view

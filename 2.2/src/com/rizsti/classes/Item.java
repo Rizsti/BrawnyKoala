@@ -1,5 +1,9 @@
 package com.rizsti.classes;
-
+/**
+ * A class representing an item a character can have or equip
+ * @author Andrea Dewey
+ *
+ */
 public class Item {
 
 	private int itemId;			//a unique identifier

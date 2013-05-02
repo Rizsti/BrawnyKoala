@@ -1,5 +1,9 @@
 package com.rizsti.classes;
-
+/**
+ * A class representing a characters attack
+ * @author Andrea Dewey
+ *
+ */
 public class Attack {
 	
 	private String name;		//the name of the weapon/attack

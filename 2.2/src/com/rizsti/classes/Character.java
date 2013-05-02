@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-
+/**
+ * 
+ * @author Andrea Dewey
+ *
+ * Last Edited: April 2013
+ */
 public class Character {
 	
 	//calculation variables

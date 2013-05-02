@@ -22,6 +22,11 @@ import com.rizsti.classes.Attack;
 import com.rizsti.classes.Character;
 import com.rizsti.teddy.R;
 
+/**
+ * 
+ * @author Andrea Dewey
+ *
+ */
 public class Battle extends Fragment {
 
 	//The view that gets inflated

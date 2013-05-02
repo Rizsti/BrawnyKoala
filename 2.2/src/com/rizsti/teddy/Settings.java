@@ -14,7 +14,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.rizsti.dataprocessing.MySettings;
-
+/**
+ * 
+ * @author Andrea Dewey
+ *
+ */
 public class Settings extends Activity {
 
 	MySettings mySettings;
