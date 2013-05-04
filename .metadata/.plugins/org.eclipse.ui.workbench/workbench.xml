@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="11" version="2.0">
+<workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
 <window height="728" maximized="true" width="1024" x="342" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -35,13 +35,18 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Spell.java" partName="Spell.java" path="C:/Users/Andrea/Documents/GitHub/BrawnyKoala/2.2/src/com/rizsti/classes/Spell.java" title="Spell.java" tooltip="2.2/src/com/rizsti/classes/Spell.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Spell.java" partName="Spell.java" path="C:/Users/Andrea/Documents/GitHub/BrawnyKoala/2.2/src/com/rizsti/classes/Spell.java" title="Spell.java" tooltip="2.2/src/com/rizsti/classes/Spell.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/2.2/src/com/rizsti/classes/Spell.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="850" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DatabaseHelper.java" partName="DatabaseHelper.java" path="C:/Users/Andrea/Documents/GitHub/BrawnyKoala/2.2/src/com/rizsti/dataprocessing/DatabaseHelper.java" title="DatabaseHelper.java" tooltip="2.2/src/com/rizsti/dataprocessing/DatabaseHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/2.2/src/com/rizsti/dataprocessing/DatabaseHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -57,7 +62,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (12 items)"/>
+<category IMemento.internal.id="Errors (3 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -309,6 +314,7 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/2.2/src/com/rizsti/teddy/CharacterSelect.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/2.2/src/com/rizsti/teddy/Details.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/2.2/src/com/rizsti/teddy/Settings.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/2.2/src/com/rizsti/dataprocessing/DatabaseHelper.java"/>
 </editors>
 <item historyLabel="Spell.java" index="0">
 <position info="not_deleted" x="72" y="0"/>
@@ -436,8 +442,11 @@
 <item historyLabel="Battle.java" index="8">
 <position info="not_deleted" x="1809" y="0"/>
 </item>
-<item active="true" historyLabel="Spell.java" index="0">
+<item historyLabel="Spell.java" index="0">
 <position info="not_deleted" x="4934" y="0"/>
+</item>
+<item active="true" historyLabel="DatabaseHelper.java" index="13">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -445,13 +454,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="bottom"/>
-<trimItem IMemento.internal.id="right"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -464,6 +466,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DatabaseHelper.java" tooltip="2.2/src/com/rizsti/dataprocessing/DatabaseHelper.java">
+<persistable path="/2.2/src/com/rizsti/dataprocessing/DatabaseHelper.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Battle.java" tooltip="2.2/src/com/rizsti/fragments/Battle.java">
 <persistable path="/2.2/src/com/rizsti/fragments/Battle.java"/>
 </file>
@@ -481,9 +486,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Basic.java" tooltip="2.2/src/com/rizsti/fragments/Basic.java">
 <persistable path="/2.2/src/com/rizsti/fragments/Basic.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DatabaseHelper.java" tooltip="2.2/src/com/rizsti/dataprocessing/DatabaseHelper.java">
-<persistable path="/2.2/src/com/rizsti/dataprocessing/DatabaseHelper.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MySettings.java" tooltip="2.2/src/com/rizsti/dataprocessing/MySettings.java">
 <persistable path="/2.2/src/com/rizsti/dataprocessing/MySettings.java"/>
