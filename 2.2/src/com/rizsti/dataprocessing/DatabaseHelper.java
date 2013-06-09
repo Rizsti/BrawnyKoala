@@ -21,6 +21,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  *
  *	Last Edited: March 2013
  */
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 		
 	//Database name and version
@@ -69,6 +70,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	private final String COL_FORT		= "Fort";
 	private final String COL_WILL		= "Will";
 	private final String COL_HITDIE		= "HitDie";
+	private final String COL_CASTLEVEL	= "CasterLevel";
+	private final String COL_SPELLPERDAY= "SpellsPerDay";
+	private final String COL_KNOWNSPELLS= "KnownSpells";
 	
 	//Attacks
 	private final String COL_ARANGE		= "Range";
@@ -236,7 +240,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 					COL_CTOUCH	+ TYPE_INT  + 		C +
 					COL_CCHEALTH+ TYPE_INT 	+		C + 
 					COL_CTHEALTH+ TYPE_INT  +		C +
-					COL_HITDIE	+ TYPE_INT	+					
+					COL_HITDIE	+ TYPE_INT	+		C +
+					COL_CASTLEVEL+TYPE_INT 	+		C +
+					COL_SPELLPERDAY+TYPE_TEXT+		C +
+					COL_KNOWNSPELLS+TYPE_TEXT+		
 					");";
 	
 	private final String CREATE_STATS = 
@@ -505,7 +512,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ArrayList<Item> items = c.getInventory();
 			if (!(items==null))
 			{
-				//inset the characters items and populate the inventory
+				//set the characters items and populate the inventory
 				for (int i=0; i<items.size(); i++)
 				{
 					//The item for the current position in the arraylist
@@ -706,9 +713,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			//the Character to return
 			Character ch=new Character();
 			//The columns you will be selecting
-			String cSelection[] = {COL_ID,COL_NAME,COL_CRACE,COL_CALIGN,COL_CCLASS,COL_CDEITY,
+			String selection[] = {COL_ID,COL_NAME,COL_CRACE,COL_CALIGN,COL_CCLASS,COL_CDEITY,
 					COL_CEXP,COL_CINIT,COL_CCARCAP,COL_WILL,COL_REF,COL_FORT,COL_CBASEATK,
-					COL_CGRAPPLE,COL_CGOLD,COL_CLEVEL,COL_CAC,COL_CTOUCH,COL_CCHEALTH,COL_CTHEALTH,COL_HITDIE};
+					COL_CGRAPPLE,COL_CGOLD,COL_CLEVEL,COL_CAC,COL_CTOUCH,COL_CCHEALTH,COL_CTHEALTH,
+					COL_HITDIE, COL_CASTLEVEL};
 			String stSelection[] = {COL_ID,COL_SSTR,COL_STSTR,COL_SWIS,COL_STWIS,COL_SCON,COL_STCON,
 					COL_SCHA,COL_STCHA,COL_SINT,COL_STINT,COL_SDEX,COL_STDEX};
 			String skSelection[] = {COL_ID,COL_CHID,COL_APP,COL_MAPP,COL_AUTO,COL_MAUTO,COL_BAL,
@@ -736,7 +744,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			
 			//The cursor containing the information from the characters table
 			Cursor c = db.query(TABLE_CHARACTERS,	//The name of the table to query
-					cSelection,				//The columns to return
+					selection,				//The columns to return
 					COL_ID+'='+id,					//the where clause
 					null,
 					null,					//Group the rows
@@ -765,6 +773,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			ch.setcHealth(c.getInt(18));
 			ch.settHealth(c.getInt(19));
 			ch.setHitDie(c.getInt(20));
+			ch.setCasterLevel(c.getInt(21));
 			//Close the character cursor
 			c.close();
 			
@@ -935,6 +944,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 			insertValues.put(COL_FORT, c.getFortitude());
 			insertValues.put(COL_WILL, c.getWill());
 			insertValues.put(COL_HITDIE,c.getHitDie());
+			insertValues.put(COL_CASTLEVEL, c.getCasterLevel());
 			
 			return insertValues;
 		}
@@ -989,7 +999,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		}
 		
 		/*
-		 * A method that returns a ContentValues object filled with item information bassed off of the item passed in
+		 * A method that returns a ContentValues object filled with item information based off of the item passed in
 		 */
 		public ContentValues createItemCV(Item it)
 		{

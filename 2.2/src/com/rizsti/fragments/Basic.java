@@ -145,9 +145,24 @@ public class Basic extends Fragment {
 		deity.setAdapter(adDeities);
 		race.setAdapter(adRace);
 		
-		//return the infalted view
+		
+//		ParseObject spell = new ParseObject("Spells");
+//		spell.put("Name", "Bear's Endurance, Mass");
+//		spell.put("School", "Transmutation");
+//		spell.put("Level","Clr 6, Drd 6, Sor/Wiz 6");
+//		spell.put("Components", "V,S,DF");
+//		spell.put("CastingTime", "1 standard action");
+//		spell.put("Range", "Close (25ft. + 5ft./2 levels");
+//		spell.put("Target", "One creature/level, no two of which can be more than 30ft. apart");
+//		spell.put("Duration", "1min./level");
+//		spell.put("SavingThrow", "Will negates(harmless)");
+//		spell.put("SpellResistance", "Yes");
+//		spell.put("Description", "Mass bear's endurance works like bear's endurance, except that it affects multiple creatures.");
+//		spell.saveInBackground();
+//		
+		
+	    //return the infalted view
 	   return v;
-	    
 	  }
 	
 	/**

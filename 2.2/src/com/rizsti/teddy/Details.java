@@ -31,21 +31,22 @@ public class Details extends Activity {
 	private final String T1="Basic";
 	private final String T2="Battle";
 	//private final String T3="Skills";
+	
 	private final int NUM_TABS=2; //Number of tabs we have
 	private Basic basic;
 	//private Skills skills;
 	private Battle battle;
+	
 	private String storedFrag[] = new String[NUM_TABS]; //Length is the number of tabs we have
 	private Tab tabBasic,tabBattle;//,tabSkills;
 	private boolean existingChar=false;
-	
-	Bundle savedInstanceState;
 	
 	//Object Variables
 	Character c;
 	ActionBar ab;
 	DatabaseHelper dbh;
 	MySettings mySettings;
+	Bundle savedInstanceState;
 	
 	//Counting variables
 	int j = 0;  //The number of elements currently in storedFrag that are not null
@@ -60,11 +61,14 @@ public class Details extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_details);
 		this.savedInstanceState = savedInstanceState;
+		
 		//Initialize parse
 		Parse.initialize(this, "3sfbEGVbyq3lgjRZJJbLgonYfHz83LkaJlp7e0WP", "HFMtnDO5kzeSqcL9TEXrtRsrvWCwNsZUBGvsndbS"); 
 		mySettings = MySettings.getInstance(this);
+		
 		//get the actionbar
 		ab = getActionBar();
+		
 		//get the database handler
 		dbh = new DatabaseHelper(this);
 		
@@ -97,7 +101,7 @@ public class Details extends Activity {
 		Intent i = getIntent();
 	
 		//Create the character
-		if (i.getIntExtra("Type", 1)==MySettings.NEW_CHARACTER)
+		if (i.getIntExtra("Type", 1)==MySettings.NEW_CHARACTER) 
 		{
 			//create a new character
 			c = new Character();
@@ -126,6 +130,7 @@ public class Details extends Activity {
 	protected void onResume() {
 		//Set the character
 		basic.setCharacter(c);
+		
 		//Set the title
 		if (c.getName()==null)
 		{

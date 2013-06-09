@@ -36,16 +36,19 @@ public class Character {
 	private int age;			//age of the character
 	private int experience;		//current character experience
 	private int hitDie=1;		//characters hit die
-
-
+	private int[] spellsKnown = new int[10]; //The number of spells a character knows
+	private int[] spellsPerDay = new int[10];//The number of spells a character can use per day
+	
+	
 	private int initiative;		//characters initiative
 	private int tHealth;		//characters total health
 	private int cHealth;		//the characters current health
 	private int level=1;		//the characters level
+	private int casterLevel=level;	//The level which applies to spells cast, if applicable
 	private int height;			//characters height
 	private int weight;			//characters weight
 	private int grapple;		//the characters grapple
-	private int[] baseAttack;		//the characters base attack
+	private int[] baseAttack;	//the characters base attack
 	private int gold;			//the amount of gold the character has
 	private int ac;				//Armour class
 	private int touch;			//Touch ac
@@ -112,6 +115,7 @@ public class Character {
 		tHealth 	= 0;
 		cHealth		= tHealth;
 		level 		= 1;
+		casterLevel = level;
 		height 		= 0;
 		weight 		= 0;
 		grapple 	= 0;
@@ -153,7 +157,7 @@ public class Character {
 			int strength, int wisdom, int dexterity, int constitution,
 			int intelligence, int charisma, int modStr, int modWis, int modDex,
 			int modCon, int modInt, int modCha, int fortitude, int reflex,
-			int will, ArrayList<Item> inventory) {
+			int will, ArrayList<Item> inventory, int casterLevel) {
 		this.id = id;
 		this.name = name;
 		this.hairColour = hairColour;
@@ -191,6 +195,7 @@ public class Character {
 		this.reflex = reflex;
 		this.will = will;
 		this.inventory = inventory;
+		this.casterLevel = casterLevel;
 	}
 	
 
@@ -206,7 +211,7 @@ public class Character {
 			int tmpInt, int tmpCha, int modStr, int modWis, int modDex,
 			int modCon, int modInt, int modCha, int fortitude, int reflex,
 			int will, CSkills skillsRanks, CSkills skillsMisc,
-			ArrayList<Item> inventory, ArrayList<Attack> attacks) {
+			ArrayList<Item> inventory, ArrayList<Attack> attacks, int casterLevel) {
 		super();
 		this.name = name;
 		this.race = race;
@@ -249,6 +254,7 @@ public class Character {
 		this.skillsMisc = skillsMisc;
 		this.inventory = inventory;
 		this.attacks = attacks;
+		this.casterLevel = casterLevel;
 	}
 
 	
@@ -1066,6 +1072,20 @@ public class Character {
 		this.attacks = attacks;
 	}
 	
+	/**
+	 * @return the casterLevel
+	 */
+	public int getCasterLevel() {
+		return casterLevel;
+	}
+
+	/**
+	 * @param casterLevel the casterLevel to set
+	 */
+	public void setCasterLevel(int casterLevel) {
+		this.casterLevel = casterLevel;
+	}
+
 	public int getHitDie() {
 		return hitDie;
 	}
@@ -1080,6 +1100,56 @@ public class Character {
 
 	public void setBaseAttack(int[] baseAttack) {
 		this.baseAttack = baseAttack;
+	}
+
+	public int[] getSpellsKnown() {
+		return spellsKnown;
+	}
+
+	public String getStringSpellsKnown() {
+		String s="";
+		int[] sk=getSpellsKnown();
+		
+		for (int i=0;i<sk.length;i++)
+		{
+			s+=String.valueOf(sk[i])+",";
+		}
+		
+		return s;
+	}
+	
+	public void setSpellsKnown(String spellsKnown) {
+		String[] tokens = spellsKnown.split(",");
+		
+		for (int i=0; i<tokens.length;i++)
+		{
+			this.spellsKnown[i]=Integer.parseInt(tokens[i]);
+		}
+	}
+
+	public int[] getSpellsPerDay() {
+		return spellsPerDay;
+	}
+	
+	public String getStringSpellsPerDay(){
+		String s="";
+		int[] spd = getSpellsPerDay();
+		
+		for (int i=0;i<spd.length;i++)
+		{
+			s+=String.valueOf(spd[i])+",";
+		}
+		
+		return s;
+	}
+
+	public void setSpellsPerDay(String spellsPerDay) {
+		String[] tokens = spellsPerDay.split(",");
+		
+		for (int i=0;i<tokens.length;i++)
+		{
+			this.spellsPerDay[i]=Integer.parseInt(tokens[i]);
+		}
 	}
 
 	/**

@@ -1,0 +1,5 @@
+1370753645699	Encapsulate field 'parseId'
+1370754682342	Encapsulate field 'spellsKnown'
+1370754858014	Encapsulate field 'spellsPerDay'
+1370756700125	Move compilation unit
+1370756766623	Rename resource 'activity_spell_book.xml'
